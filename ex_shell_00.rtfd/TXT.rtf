@@ -1,0 +1,84 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15180\viewh17460\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\f0\fs40 \cf0 {{\NeXTGraphic Screen Shot 2020-11-24 at 5.02.33 PM.png \width12700 \height9140 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qj\partightenfactor0
+\cf0 Questo esercizio l\'92ho risolto semplicemente creando un file .txt con touch, poi ci ho scritto sopra Z. Ogni volta che viene stampato il suo contenuto mostra Z.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2020-11-24 at 5.04.19 PM.png \width12280 \height10580 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qj\partightenfactor0
+\cf0 \
+Ho creato un file con touch senza tipo, gli ho modificato la data di modifica (con touch -t), ho modificato la dimensione del file (con la generazione di caratteri causali: 
+\f1 \cf2 head -c_num /dev/random >>file_name
+\f0 \cf0 ), infine ho modificato i permessi (con il comando chmod). PS ricordati sempre di zipparla.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2020-11-24 at 5.09.51 PM.png \width12320 \height11660 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qj\partightenfactor0
+\cf0 \
+Per svolgere questo esercizio ho:\
+- per prima cosa creato le due cartelle (test0 e test2) e ne ho modificato i permessi\
+- successivamente ho creato test1, test3 e test4, ne ho modificato i permessi e la dimensione.\
+- test5 e test6 sono file particolari. test6 consiste in un file collegato in maniera soft a test0 (
+\f1\fs42 \cf2 soft link < ln -s file file>). Invece notiamo che test5 ha sulla 2a colonna un 2, cio\'92 indica la presenza di un collegamento, possiamo subito notare che tale file \'e9 test3, per la presenza degli stessi valori di dimensione e tempo. Per connetterli tra loro usiamo un collegamento Hard (Hard link < ln file file>)\
+Per ultima cosa, ma non meno importante, andiamo a zippare il file.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+\cf0 {{\NeXTGraphic Screen Shot 2020-11-24 at 5.39.33 PM.png \width12380 \height8800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qj\partightenfactor0
+
+\f1\fs42 \cf2 \
+Per fare questo esercizio, dobbiamo chiedere al nostro computer se sono presenti chiavi Kerberos (klist), altrimenti le dovremo generare (kinit). SE NE POSSONO AVERE POCHE PER VOLTA!!!\
+Infine andiamo a mettere nel file kilt.txt tale/i chiave/i\
+
+\f0\fs40 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\fs24 \cf0 {{\NeXTGraphic Screen Shot 2020-11-24 at 5.44.28 PM.png \width12400 \height9020 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\fs40 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qj\partightenfactor0
+\cf0 \
+ Per prima cosa creo un file midLS. Poi scriviamo il comando per visualizzare i file di una cartella come lista < ls >, seguito da un - e da:\
+- p: mette davanti alle cartella lo /\
+- m: che separa i file con la virgola\
+- tU: che organizza i file in ordine temporale dal pi\'f9 giovane al pi\'f9 vecchio per data di creazione\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\fs24 \cf0 {{\NeXTGraphic Screen Shot 2020-11-24 at 5.51.46 PM.png \width12220 \height10780 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\fs40 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qj\partightenfactor0
+\cf0 \
+Per prima cosa creo il file .sh con touch (per eseguirlo baster\'e0 scrivere sulla linea di comando bash seguito dall\'92indirizzo sorgente del file sh). Al suo interno scriviamo < git log --format=\'92%H\'92 -n5 >, che ci mostra solamente gli ID (--format=\'92%H\'92) gli ultimi 5 log.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\fs24 \cf0 {{\NeXTGraphic Screen Shot 2020-11-24 at 5.56.39 PM.png \width12240 \height9800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\fs40 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qj\partightenfactor0
+\cf0 \
+Per prima cosa dobbiamo avere salvato sulla nostra directory il file .gitignore.    Creiamo il file .sh, }
