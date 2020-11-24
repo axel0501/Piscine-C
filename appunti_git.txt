@@ -1,0 +1,18 @@
+					Appunti su GiT
+	git init					per iniziare un git su una cartella
+	
+	git status 					per vedere come sta il caricamento dei file
+
+	git add <nome>					per aggiungere al controllo il file
+	
+	git commit -m "<nome versione>"			per aggiungere all'osservatore un file
+
+	git remote add origin <URL del server>		per aggiungere in server git
+
+	git clone <URL>					mi permette di clonare una cartella git associata dal suo URL
+
+	git branch					per visualizzare le ramificazioni del git [-a]
+
+	git push origin master				per caricare sul server li file commisionati 
+
+	
