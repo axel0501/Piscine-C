@@ -1,2 +1,6 @@
-    Name               Cache name                                 Expires
-* ametta@42ROMA.IT   API:DBB4D0C2-2BC9-4510-8625-A10C80DEE7CF   Nov 25 20:07:18 2020
+Credentials cache: API:4AEE5771-54B6-4D3F-9AC1-C0C2BFE5BF3D
+        Principal: ametta@42ROMA.IT
+
+  Issued                Expires               Principal
+Nov 25 15:19:14 2020  Nov 26 01:19:14 2020  krbtgt/42ROMA.IT@42ROMA.IT
+Nov 25 15:19:16 2020  Nov 26 01:19:14 2020  HTTP/storage.42roma.it@42ROMA.IT
