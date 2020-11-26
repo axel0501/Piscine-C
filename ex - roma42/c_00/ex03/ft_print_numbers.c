@@ -1,13 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/26 10:17:19 by ametta            #+#    #+#             */
+/*   Updated: 2020/11/26 10:30:04 by ametta           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void ft_putchar(char c);
-void ft_print_numbers(void);
+void	ft_print_numbers(void)
+{
+	char nbr;
 
-int main(void) { ft_print_numbers(); }
-
-void ft_print_numbers(void){
-	char NBR = '0';
-	while (NBR <= '10'){ ft_putchar(NBR); NBR++; }
+	nbr = '0';
+	while (nbr <= '9')
+	{
+		ft_putchar(nbr++);
+	}
 }
 
-void ft_putchar(char c){ write(STDOUT_FILENO, &c , 1); }
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
