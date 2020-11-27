@@ -12,54 +12,57 @@
 
 #include <unistd.h>
 
-void	print(int a, int r)
+#include <stdio.h>
+
+/*
+void    write_f(char c)
+{
+    write(1, &c, 1);
+}
+
+void    pre_write(int a[], int r)
 {
 	int i;
 
 	i = 0;
 	while (i < r)
 	{
-		write(1, &a[i], 1);
+		printf("%d", &a[i]);    //bbdejwbvjuhvjwbj
+		printf("\n");
 		i++;
 	}
 }
+*/
 
-int	iniz_array(int array, int r)
+int	iniz_vettore(int vett[], int rip)
 {
-	int array[r];
-	int count;
+	int count = 0;
 
-	i = 0;
-	while (i < r)
+	while (count < rip)
 	{
-		array[i] = 0;
-		i++;
+		vett[count] = 0;
+		count++;
 	}
-	return (array, n);
+	return (vett, rip);
 }
 
-void	ft_print_combn(int n)
+int	stampa_vettore(int vett[], int rip)
 {
-	int a[n];
-	int i;
-	int j;
+	int count = 0;
 
-	i = 0;
-	j = n + 1;
-	iniz_array(a, n)
-	while (i < n)
+	while (count < rip)
 	{
-		while (j > 0)
-		{
-			a[j]++;
-			j--;
-		}
-		i++;
+		write();
+		count++;
 	}
+	return (vett, rip);
 }
 
-int main(void)
+int	main(void)
 {
-	int nbr = 2;
-	ft_print_combn(nbr);
+    int n = 10;
+	int vett[n];
+	iniz_vettore(vett, n);
+	stampa_vettore(vett, n);
 }
+
