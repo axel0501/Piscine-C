@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/29 17:03:56 by ametta            #+#    #+#             */
-/*   Updated: 2020/11/29 18:40:32 by ametta           ###   ########.fr       */
+/*   Created: 2020/11/30 09:53:50 by ametta            #+#    #+#             */
+/*   Updated: 2020/11/30 10:29:35 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void		ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void		ft_swap(int *a, int *b);
-
-int			main(void)
+void	ft_putstr(char *str)
 {
-	int a;
-	int b;
+	int count;
 
-	a = 5;
-	b = 0;
-	ft_swap(&a, &b);
-	ft_putchar(a + 48);
-	ft_putchar('\n');
-	ft_putchar(b + 48);
+	count = 0;
+	while (str[count] != '\0')
+		ft_putchar(str[count++]);
 	ft_putchar('\n');
 }
