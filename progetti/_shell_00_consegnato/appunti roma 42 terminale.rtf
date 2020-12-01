@@ -1,0 +1,135 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15180\viewh12800\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs42 \cf2 					Comandi del terminale \
+\pard\pardeftab720\li2834\fi-2835\partightenfactor0
+\cf2 	man		ci permette di visualizzare il manuale [ se seguito da un comando, ci mostra tutte le varianti ]\
+\pard\pardeftab720\partightenfactor0
+\cf2 	\
+	pwd		vedi posizionamento attuale nel directory sistem\
+	\
+	ls			vedi contenuto cartella attuale\
+	\
+\pard\pardeftab720\li7245\fi-7246\partightenfactor0
+\cf2 	ls			vedi contenuto cartella [ -l in formato lista (con molte informazioni su gli oggetti contenuti; -la in formato lista anche di quelli nascosti]\
+\pard\pardeftab720\partightenfactor0
+\cf2 	\
+	mkdir		crea cartella\
+	\
+	rmdir		rimuovi cartella (solo se e\'92 vuota)\
+\
+	rm file		per rimuovere i file\
+	\
+	cd			per muoversi tra cartella e cartella\
+\
+\pard\pardeftab720\li2832\fi-2833\partightenfactor0
+\cf2 	chmod		modifica permessi [I file sono caratterizzati dall\'92avere delle propriet\'e0: le prime lettere definiscono il tipo, poi seguono tre triplette di lettere < rwx > che indicano i privilegi che hanno i tre soggetti, dell\'92utente, del gruppo e del restio del mondo, con < r > si indica il permesso di leggere il file, con < w > il permesso per modificarlo e con < x > il permesso per eseguirlo. Per modificare i permessi, dopo aver scritto il comando, scriviamo il soggetto che dobbiamo modificare, quindi < u > per l\'92utente, < g > per il gruppo e < o > per il resto del mondo seguito da < + > o < - > per aggiungere o rimuovere il permesso, infine il permesso. Con < a > andremo a indicare tutti i soggetti. Altra maniera per modificare i permessi e\'92 il metodo che assegna a < rwx > rispettivamente < 421 > e si va a definire i permessi che hanno ogni singolo soggetto tramite la somma di questi tre valori. Esempio: Se voglio scrivere < rwx rw- r-- >, il soggetto utente avr\'e0 come valore < 421 >, cio\'e8 < 7 >, il gruppo avr\'e0 < 420 >, cio\'e8 6, infine il resto del mondo avr\'e0 < 400 >, dunque < 4 >. Perci\'f2 < rwx rw- r-- > si pu\'f2 scrivere anche come < chmod 762 > ]\
+\pard\pardeftab720\partightenfactor0
+\cf2 	\
+	echo		permette di stampare a video sullo standard output ci\'f2 che vogliamo\
+	\
+\pard\pardeftab720\li2832\fi-2833\partightenfactor0
+\cf2 	cat			permette di stampare a video il contenuto di un file [ con -e ci permette di visualizzare informazioni extra, come caratteri non stampabili e quando nel testo siamo andati a capo (ponendo un $ per ogni nuova riga) ]\
+\pard\pardeftab720\partightenfactor0
+\cf2 	\
+\pard\pardeftab720\li2834\fi-2835\partightenfactor0
+\cf2 	touch		permette creare un nuovo file [ < touch name.txt > abbiamo creato un nuovo file di testo ] oppure modificare la data di accesso e dell\'92ultima modifica di un file [ < touch -t > possiamo modificare la data e l\'92ora dell\'92ultimo accesso e modifica, esempio < touch -t  YYYYMMDDHHMM name.txt> ]\
+\pard\pardeftab720\partightenfactor0
+\cf2 	\
+	per creare una variabile, basta scrivere nella shell il nome seguito dal simbolo uguale e dal suo valore, come < nome_variabile=valore_varibile >. Per stampare il nome della variabile, scriviamo < echo nome_variabile >, se ne vogliamo stampare il valore < echo $nome_variabile >. Come abbiamo scritto ora la variabile la rende utilizzabile solo all\'92interno di questo terminale, e non di altri, infatti utilizzando < env >, un programma integrato nel terminale, per vedere le propriet\'e0 della shell, ci accorgeremmo che tale\
+	\
+	metacaratteri, ovvero caratterii che vengono interpretatti dalla shell come inibitori o di sostituzione. Esempio: supponiamo di voler compiere un'azione su tutti i file di una cartella di un determinato tipo: basta scrivere < azione * .tipo >, come per esempio < wc *.txt >, dove wc \'e9 il comando che mette a video il numero di linee, parole e byte contenuti nel file.\
+	Se fossimo interessati a fare una determinata operazione a tutti quei file che hanno uno o pi\'fa caratteri, basta sostituire i caratteri indesiderati con tanti ?. Ad esempio: se vogliamo fare una determinata azione su tutti quei file che iniziano per T e sono seguiti da tre caratteri, basta scrivere < azione t???.type >. Se invecee non ci interessa il numero di caratteri < azione t*.type >\
+	~ sosituisce la cartella root del nostro account\
+	per inibire tali caratteri si pu\'f3 mettere tale carattere tra apoatrofi singoli, doppi o se \'e9 un singolo carattere basta anteporgli \\:  < '*' >; < "*" >; < \\* >. La diifferenza tra le virgolette singole e doppie sta nel fatto che, ad esempio per le variabili, le virgolette doppie non vanno ad inibire la messa a video della variabile, mentre la virgoletta singola va ad inibire tutte i caratteri al loro interno:\
+	con virgoletta doppia: <echo "$variabile *"> <valore_var *>\
+	con virgoletta singola: <echo '$variabile *'> <$variabile *>\
+\
+Vediamo ora come manipolare i file:\
+		more		ci permette di visualizzare il deluso del file impaginandolo\
+\pard\pardeftab720\li3573\fi-3574\partightenfactor0
+\cf2 		\
+		head		ci permette di visualizzare l'inizio di un file [scrivendo < head -n 2 file.type > visualizzo le prime 2 righe del file, < head -c 10 file.type > con questo comando visualizziamo i primi 10 caratteri del file  ]\
+\pard\pardeftab720\partightenfactor0
+\cf2 		\
+\pard\tx0\pardeftab720\li3570\fi-3571\partightenfactor0
+\cf2 		tail			ci permette di visualizzare ci\'f2 che s\'ec trova in fondo al file [ valgono gli stessi comandi di head ]\
+\
+		grep		ci permette di filtrare un file [ < grep parola fle.type >  questo modo vado alla ricerca della parola all\'92interno del file; < grep -v parola fle.type > far\'e0 la ricerca inversa, ovvero tutte quelle righe in cui non \'e8 presente la parola ricercata; < grep -i PaRoLa fle.type > cos\'ec la nostra ricerca sar\'e0 Capse insensitive, ovvero certer\'e0 tutte le parole indipendentemente dalla presenza di maiuscole ]\
+\pard\tx0\pardeftab720\li3570\fi-3571\qc\partightenfactor0
+\cf2 \
+\pard\tx0\pardeftab720\li3570\fi-3571\partightenfactor0
+\cf2 \
+\pard\tx0\pardeftab720\partightenfactor0
+\cf2 Vediamo ora come funzionano gli input e gli output. Ogni programma possiede in input, un output e un output di errore. Anche se noi non ce ne preoccupiamo, il terminale fa gi\'e0 questo per noi, una volta forniti i dati, ci stamper\'e0 in caso fosse possibile operare su di essi il risultato di tale operazione, altrimenti ci restituir\'e0 un errore. Tale differenziazione \'e8 necessaria nel caso in cui volessimo utilizzare i risultati di errore per fare altre operazioni. Vediamo un\'92esempio un p\'f2 pi\'f9 complicato:\
+Supponiamo di voler filtrare i risultati di una lettura degli oggetti di una cartella per nome. Per far ci\'f2 dovremo far convergere i valori di output della funzione ls in una grep, quelli invece di errore nel file error.log. \
+	 Per reindirizzare l\'92output di ls dobbiamo utilizzare il carattere | (pipe): < ls | grep txt > ci\'f2 permette di filtrare i risultati di ls per le righe contenenti txt\
+	Per mettere gli output (corretti) in file utilizziamo il carattere >: < ls > valore.txt > (P.s. evita di usare un file di test pre-esistente)\
+	Per mettere gli output di errore in file utilizziamo  2>: < ls parola 2> error.tlog > (P.s. evita di usare un file di test pre-esistente\
+Unendo le due cose: < ls bonjour test* 2> error.log | grep test.txt >\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+Un\'92altro esempio: supponiamo di voler vedere in quante righe in un file di testo ricorre una parola\
+[ < cat testo.txt | grep parola | wc -l > ]\
+\
+E\'92 possibile farlo anche diversamente: \
+[ < grep parola < testo.txt > ] questa funzione filtra il file di testo ogni volta che nella riga incontra la parola ricercata.\
+\
+Mettendo un solo > andr\'f2 a sovrascrivere ogni volta il valore che andr\'f2 ad inserire nel file, invece se volessi aggiungere al mio file nuovi dati basta scrivere due volte >, cos\'ec >>\
+\
+Con << andremo a scrivere sul nostro file fino ad un parametro di uscita: [ < nome_file << FINE >]\
+\
+Infine vediamo ora come unire i due output: [ < ls bonjour *.txt > risultato.txt 2>&1> ]\
+\
+		find		ci permette di effettuare ricerche nel nostro albero dei file\
+\pard\pardeftab720\li2833\fi-2834\partightenfactor0
+\cf2 				[ < find . -name file.type > cerca a partire dalla rotella corrente fino alle sottocartelle il file richiesto\
+				< find . -type d >\'a0ci mostra i risultati dei formati richiesi, anche dentro le sottocartelle (d per le cartelle\
+				< find . -maxdepth numero > possiamo anche decidere di quanto in profondit\'e0 debba andare a cercare ]\
+		\
+		wc		world count, conta il numero di righe, parole e caratteri contenute all\'92interno di un file \
+				[ -l ci permette di contare le linee; -w il numero di parole; -c il numero di caratteri ]\
+\
+		bc		calcolatrice a linea di comando con la possibilit\'e0 di allocare variabili\
+\
+Segnali per terminare funzioni come cat: ctrl d, ctrl c, ctrl \\\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\
+\
+\
+Altre cose \
+\
+head -c_num /dev/random >>file_name\
+	genera num caratteri casuali e li mette allineano del file\
+\
+echo "">file_name\
+	per impostare la grandezza del file a 1\
+\
+Soft link < ln -s file file >\
+Hard link < ln file file>\
+\
+klist -l: per visualizzare i ticket Kerberos generati sul computer\
+\
+Ls -pmtU\
+\
+git-show-branch(1)\
+           Show branches and their commits.\
+\
+       git-verify-commit(1)\
+           Check the GPG signature of commits.\
+\
+       git-verify-tag(1)\
+           Check the GPG signature of tags.\
+\
+	diff: 		genera un file in cui mette le differenze tra due file\
+\
+	patch:		applica un file diff a un originale\
+\
+\
+}
