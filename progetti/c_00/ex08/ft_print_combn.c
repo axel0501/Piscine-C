@@ -12,54 +12,56 @@
 
 #include <unistd.h>
 
-void	print(int a, int r)
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putcommas(void)
+{
+	ft_putchar(',');
+	ft_putchar(' ');
+}
+
+void	print(int *array, int n_elem)
 {
 	int i;
 
 	i = 0;
-	while (i < r)
+	while (i < n_elem)
 	{
-		write(1, &a[i], 1);
+		ft_putchar(array[n_ele] + 48);
 		i++;
 	}
+	ft_putcomma();
 }
 
-int	iniz_array(int array, int r)
+void	iniz_array(int *array, int n_elem)
 {
-	int array[r];
-	int count;
+	int i;
 
 	i = 0;
-	while (i < r)
+	while (i < n_elem)
 	{
 		array[i] = 0;
 		i++;
 	}
-	return (array, n);
 }
 
 void	ft_print_combn(int n)
 {
-	int a[n];
+	int array[10];
 	int i;
-	int j;
 
 	i = 0;
-	j = n + 1;
-	iniz_array(a, n)
+	iniz_array(array, n)
 	while (i < n)
 	{
-		while (j > 0)
-		{
-			a[j]++;
-			j--;
-		}
-		i++;
+
 	}
 }
 
 int main(void)
 {
-	int nbr = 2;
-	ft_print_combn(nbr);
+	ft_print_combn(3);
 }
