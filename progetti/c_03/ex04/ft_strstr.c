@@ -1,21 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 15:29:46 by ametta            #+#    #+#             */
-/*   Updated: 2020/11/30 17:32:34 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/02 15:25:36 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/02 17:46:13 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strstr(char *str, char *to_find)
 {
-	int count;
+	int i;
+	int s;
+	int l;
+	int len;
 
-	count = 0;
-	while (dest[count] != '\0')
-		dest[count] = src[count++];
-	dest[count] = '\0';
+	while (to_find[len] != '\0')
+		len++;
+	if (len == 0)
+		return (str);
+	i = 0;
+	while ((str[i] != '\0') && (l < len))
+	{
+		s = i;
+		l = 0;
+		while ((to_find[l] == str[s]) && (l < len))
+		{
+			l++;
+			s++;
+		}
+		i++;
+	}
+	if (l == len)
+		return (str + (i - 1));
+	else
+		return ('\0');
 }

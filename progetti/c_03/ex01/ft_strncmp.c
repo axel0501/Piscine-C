@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 15:29:46 by ametta            #+#    #+#             */
-/*   Updated: 2020/11/30 17:32:34 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/02 12:09:01 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/02 12:21:02 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int count;
+	int i;
+	int diff;
 
-	count = 0;
-	while (dest[count] != '\0')
-		dest[count] = src[count++];
-	dest[count] = '\0';
+	i = 0;
+	while ((i < n) && (s1[i] != '\0'))
+		diff += s1[i++];
+	i = 0;
+	while ((i < n) && (s2[i] != '\0'))
+		diff -= s2[i++];
+	return (diff);
 }

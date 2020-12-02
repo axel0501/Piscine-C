@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 15:29:46 by ametta            #+#    #+#             */
-/*   Updated: 2020/11/30 17:32:34 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/02 12:22:01 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/02 15:25:05 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
-	int count;
+	int i;
+	int j;
 
-	count = 0;
-	while (dest[count] != '\0')
-		dest[count] = src[count++];
-	dest[count] = '\0';
+	i = 0;
+	j = 0;
+	while (dest[j] != '\0')
+		j++;
+	while (src[i] != '\0')
+		dest[j++] = src[i++];
+	dest[j] = '\0';
+	return (dest);
 }
