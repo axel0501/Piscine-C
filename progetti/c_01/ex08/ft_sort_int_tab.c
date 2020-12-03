@@ -6,7 +6,7 @@
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 15:10:25 by ametta            #+#    #+#             */
-/*   Updated: 2020/11/30 15:24:10 by ametta           ###   ########.fr       */
+/*   Updated: 2020/12/03 12:01:14 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ void	ft_sort_int_tab(int *tab, int size)
 		j = i;
 		while (j < size)
 		{
-			if (*tab[j] < *tab[i])
+			if (tab[j] < tab[i])
 			{
-				temp = *tab[j];
-				*tab[j] = *tab[i];
-				*tab[i] = temp;
+				temp = tab[j];
+				tab[j] = tab[i];
+				tab[i] = temp;
 			}
 			j++;
 		}
