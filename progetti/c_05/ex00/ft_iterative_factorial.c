@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 14:48:00 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/03 11:52:20 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/06 11:56:20 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/06 14:54:09 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
+int	ft_iterative_factorial(int nb)
 {
-	int temp;
-	int count;
+	int i;
 
-	count = 0;
-	while (count <= size / 2)
+	i = nb - 1;
+	while (i>0)
 	{
-		temp = tab[size - 1 - count];
-		tab[size - 1 - count] = tab[count];
-		tab[count] = temp;
-		count++;
+		nb *= i;
+		i--;
 	}
+	return (nb);
 }

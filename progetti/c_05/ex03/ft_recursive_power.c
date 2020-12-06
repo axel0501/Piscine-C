@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 09:59:27 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/04 09:59:29 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/06 12:41:39 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/06 12:49:26 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_uppercase(char *str)
+int	ft_recursive_power(int nb, int power)
 {
-	int check;
-	int i;
-
-	check = 1;
-	i = 0;
-	while ((str[i] != '\0') && (check == 1))
-	{
-		if (str[i] < 65 || str[i] > 90)
-			check = 0;
-		i++;
-	}
-	return (check);
+	if (power < 0)
+		return (0);
+	else if (power < 1)
+		return (1);
+	else
+		return (nb * ft_recursive_power(nb, power - 1));
 }

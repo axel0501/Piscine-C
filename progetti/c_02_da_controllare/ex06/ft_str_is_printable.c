@@ -6,7 +6,7 @@
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 10:06:23 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/01 10:15:41 by ametta           ###   ########.fr       */
+/*   Updated: 2020/12/04 10:00:57 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		ft_str_is_printable(char *str)
 
 	check = 1;
 	i = 0;
-	while (str[i] != '\0')
+	while ((str[i] != '\0') && (check == 1))
 	{
 		if (str[i] < 32 || str[i] > 127)
 			check = 0;

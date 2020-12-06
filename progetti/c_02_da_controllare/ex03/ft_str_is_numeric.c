@@ -6,7 +6,7 @@
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 18:48:49 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/01 09:52:43 by ametta           ###   ########.fr       */
+/*   Updated: 2020/12/04 09:50:01 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		ft_str_is_numeric(char *str)
 
 	check = 1;
 	i = 0;
-	while (str[i] != '\0')
+	while ((str[i] != '\0') && (check == 1))
 	{
 		if (str[i] < 48 || str[i] > 57)
 			check = 0;

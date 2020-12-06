@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 09:59:27 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/04 09:59:29 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/06 12:23:51 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/06 12:41:06 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_uppercase(char *str)
+int	ft_iterative_power(int nb, int power)
 {
-	int check;
 	int i;
+	int p;
 
-	check = 1;
-	i = 0;
-	while ((str[i] != '\0') && (check == 1))
+	p = nb;
+	i = 1;
+	while (i < power)
 	{
-		if (str[i] < 65 || str[i] > 90)
-			check = 0;
+		nb *= p;
 		i++;
 	}
-	return (check);
+	return (nb);
 }

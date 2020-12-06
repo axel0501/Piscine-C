@@ -6,16 +6,20 @@
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 15:29:46 by ametta            #+#    #+#             */
-/*   Updated: 2020/11/30 17:32:34 by ametta           ###   ########.fr       */
+/*   Updated: 2020/12/03 18:28:27 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	int count;
+	int i;
 
-	count = 0;
-	while (dest[count] != '\0')
-		dest[count] = src[count++];
-	dest[count] = '\0';
+	i = 0;
+	while ((dest[i] != '\0') || (src[i] != '\0'))
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest[i]);
 }

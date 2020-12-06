@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 09:59:27 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/04 09:59:29 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/06 14:30:12 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/06 14:49:19 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_uppercase(char *str)
-{
-	int check;
-	int i;
+#include <stdio.h>
 
-	check = 1;
-	i = 0;
-	while ((str[i] != '\0') && (check == 1))
-	{
-		if (str[i] < 65 || str[i] > 90)
-			check = 0;
-		i++;
-	}
-	return (check);
+int	ft_sqrt(int nb)
+{
+	int i;
+	if (nb % i == 0)
+		return (i);
+	else
+		fr_sqrt(i++);
 }

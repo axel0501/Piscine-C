@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 09:59:27 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/04 09:59:29 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/06 20:17:01 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/06 20:28:21 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_uppercase(char *str)
+int	ft_check_values(char *cv)
 {
-	int check;
 	int i;
 
-	check = 1;
 	i = 0;
-	while ((str[i] != '\0') && (check == 1))
+	while (cv[i] != '\0')
 	{
-		if (str[i] < 65 || str[i] > 90)
-			check = 0;
-		i++;
+		if (i < 31)
+		{
+			if (i % 2 == 0)
+			{
+				if (cv[i] < 49 || cv[i] > 52)
+					return (0);
+			}
+			else
+			{
+				if (cv[i] != ' ')
+					return (0);
+			}
+			i++;
+		}
+		else
+			return (0);
 	}
-	return (check);
+	if (i < 31)
+		return (0);
+	return (1);
 }

@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 09:59:27 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/04 09:59:29 by ametta           ###   ########.fr       */
+/*   Created: 2020/11/30 14:48:00 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/03 11:52:20 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_uppercase(char *str)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int check;
-	int i;
+	int temp;
+	int count;
 
-	check = 1;
-	i = 0;
-	while ((str[i] != '\0') && (check == 1))
+	count = 0;
+	while (count < size / 2)
 	{
-		if (str[i] < 65 || str[i] > 90)
-			check = 0;
-		i++;
+		temp = tab[size - 1 - count];
+		tab[size - 1 - count] = tab[count];
+		tab[count] = temp;
+		count++;
 	}
-	return (check);
 }

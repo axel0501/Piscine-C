@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 09:59:27 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/04 09:59:29 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/06 12:10:22 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/06 12:23:09 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_uppercase(char *str)
+int ft_recursive_factorial(int nb)
 {
-	int check;
-	int i;
-
-	check = 1;
-	i = 0;
-	while ((str[i] != '\0') && (check == 1))
-	{
-		if (str[i] < 65 || str[i] > 90)
-			check = 0;
-		i++;
-	}
-	return (check);
+	if(nb < 0)
+		return(0);
+	if(nb == 0 || nb == 1)
+		return(1);
+	return nb * ft_recursive_factorial(nb - 1);
 }

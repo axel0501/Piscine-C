@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 09:59:27 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/04 09:59:29 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/06 11:48:15 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/06 11:55:07 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_uppercase(char *str)
-{
-	int check;
-	int i;
+#include <unistd.h>
 
-	check = 1;
-	i = 0;
-	while ((str[i] != '\0') && (check == 1))
-	{
-		if (str[i] < 65 || str[i] > 90)
-			check = 0;
-		i++;
-	}
-	return (check);
+void	ft_putchar(char a)
+{
+	write(1, &a, 1);
+}
+
+void 	ft_putnbr_base(int nbr, char *base)
+{
+	char *result;
+	if (
+}
+
+int		main(int argc, char argv)
+{
+	int *num = argv[1];
+	char *base = argv[2];
+	ft_putnbr_base(num, base); 
 }

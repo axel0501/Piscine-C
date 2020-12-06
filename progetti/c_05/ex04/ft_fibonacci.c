@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 09:59:27 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/04 09:59:29 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/06 12:50:19 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/06 15:00:56 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_uppercase(char *str)
-{
-	int check;
-	int i;
+#include <stdio.h>
 
-	check = 1;
-	i = 0;
-	while ((str[i] != '\0') && (check == 1))
-	{
-		if (str[i] < 65 || str[i] > 90)
-			check = 0;
-		i++;
-	}
-	return (check);
+int	ft_fibonacci(int index)
+{
+	if (index < 0)
+		return -1;
+	else if (index == 0)
+		return 0;
+	else if (index == 1)
+		return 1;
+	else
+		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+}
+
+int main(void)
+{
+	printf("%d", ft_fibonacci(7));
 }
