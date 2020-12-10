@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/02 14:39:07 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/02 14:59:44 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/06 14:30:12 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/10 16:27:23 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+int	ft_sqrt(int nb)
 {
 	int i;
-	int j;
 
 	i = 0;
-	j = 0;
-	while (dest[j] != '\0')
-		j++;
-	while ((i < nb) && (src[i] != '\0'))
-		dest[j++] = src[i++];
-	dest[j] = '\0';
-	return (dest);
+	while (i < 46341 && i * i < nb)
+	{
+		i++;
+		if (i * i == nb)
+			return (i);
+	}
+	return(0);
 }
