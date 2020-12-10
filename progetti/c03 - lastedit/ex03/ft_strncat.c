@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/06 11:56:20 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/06 14:54:09 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/02 14:39:07 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/02 14:59:44 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	int i;
+	int j;
 
-	i = nb - 1;
-	while (i>0)
-	{
-		nb *= i;
-		i--;
-	}
-	return (nb);
+	i = 0;
+	j = 0;
+	while (dest[j] != '\0')
+		j++;
+	while ((i < nb) && (src[i] != '\0'))
+		dest[j++] = src[i++];
+	dest[j] = '\0';
+	return (dest);
 }

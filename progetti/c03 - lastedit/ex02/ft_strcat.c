@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/06 12:10:22 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/06 12:23:09 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/02 12:22:01 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/02 15:25:05 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_recursive_factorial(int nb)
+char	*ft_strcat(char *dest, char *src)
 {
-	if(nb < 0)
-		return(0);
-	if(nb == 0 || nb == 1)
-		return(1);
-	return nb * ft_recursive_factorial(nb - 1);
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	while (dest[j] != '\0')
+		j++;
+	while (src[i] != '\0')
+		dest[j++] = src[i++];
+	dest[j] = '\0';
+	return (dest);
 }

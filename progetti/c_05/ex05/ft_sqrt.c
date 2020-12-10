@@ -6,7 +6,7 @@
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 14:30:12 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/07 16:57:38 by ametta           ###   ########.fr       */
+/*   Updated: 2020/12/10 12:00:52 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,11 @@ int	ft_sqrt(int nb)
 	int i;
 
 	i = 0;
-	if(nb == 0)
-		return(0);
-	while (i * i < nb)
+	while (i < 46341 && i * i < nb)
+	{
 		i++;
-	if ((nb % i) == 0)
-		return (i);
-	else
-		return(0);
+		if (i * i == nb)
+			return (i);
+	}
+	return(0);
 }

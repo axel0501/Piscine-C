@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/06 12:50:19 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/06 15:00:56 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/02 15:25:36 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/02 17:46:13 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_fibonacci(int index)
+char	*ft_strstr(char *str, char *to_find)
 {
-	if (index < 0)
-		return -1;
-	else if (index == 0)
-		return 0;
-	else if (index == 1)
-		return 1;
+	int i;
+	int s;
+	int l;
+	int len;
+
+	while (to_find[len] != '\0')
+		len++;
+	if (len == 0)
+		return (str);
+	i = 0;
+	while ((str[i] != '\0') && (l < len))
+	{
+		s = i;
+		l = 0;
+		while ((to_find[l] == str[s]) && (l < len))
+		{
+			l++;
+			s++;
+		}
+		i++;
+	}
+	if (l == len)
+		return (str + (i - 1));
 	else
-		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
-}
-
-int main(void)
-{
-	printf("%d", ft_fibonacci(7));
+		return ('\0');
 }

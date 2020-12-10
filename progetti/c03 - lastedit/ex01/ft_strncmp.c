@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/06 14:30:12 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/06 14:49:19 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/02 12:09:01 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/02 12:21:02 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_sqrt(int nb)
+int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	int i;
-	if (nb % i == 0)
-		return (i);
-	else
-		fr_sqrt(i++);
+	int diff;
+
+	i = 0;
+	while ((i < n) && (s1[i] != '\0'))
+		diff += s1[i++];
+	i = 0;
+	while ((i < n) && (s2[i] != '\0'))
+		diff -= s2[i++];
+	return (diff);
 }
