@@ -6,7 +6,7 @@
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 17:33:20 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/04 09:39:03 by ametta           ###   ########.fr       */
+/*   Updated: 2020/12/07 14:56:05 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,14 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 
 	i = 0;
 	while ((src[i] != '\0') && (i < n))
-		dest[i] = src[i++];
+	{
+		dest[i] = src[i];
+		i++;
+	}
 	while (i < n)
-		dest[i++] = '\0';
-	return (dest[i]);
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }

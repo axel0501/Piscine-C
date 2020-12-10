@@ -6,20 +6,16 @@
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 11:23:59 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/02 12:21:23 by ametta           ###   ########.fr       */
+/*   Updated: 2020/12/07 15:19:52 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_strcmp(char *s1, char *s2)
 {
 	int i;
-	int diff;
 
 	i = 0;
-	while (s1[i] != '\0')
-		diff += s1[i++];
-	i = 0;
-	while (s1[i] != '\0')
-		diff -= s1[i++];
-	return (diff);
+	while (s1[i] != '\0' && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
 }

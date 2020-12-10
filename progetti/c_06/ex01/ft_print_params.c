@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/06 12:50:19 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/07 16:47:56 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/07 09:52:54 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/07 10:14:11 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_fibonacci(int index)
+#include <unistd.h>
+
+void	ft_putchar(char a)
 {
-	if (index < 0)
-		return (-1);
-	else if (index == 0)
-		return (0);
-	else if (index == 1)
-		return (1);
-	else
-		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+	write(1, &a, 1);
+}
+
+int		main(int argc, char **argv)
+{
+	int i;
+	int j;
+
+	i = 1;
+	j = 0;
+	while (i < argc)
+	{
+		while (argv[i][j] != '\0')
+		{
+			ft_putchar(argv[i][j]);
+			j++;
+		}
+		ft_putchar('\n');
+		j = 0;
+		i++;
+	}
+	return (0);
 }

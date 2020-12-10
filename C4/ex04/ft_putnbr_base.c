@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/06 12:50:19 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/07 16:47:56 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/06 11:48:15 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/06 11:55:07 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_fibonacci(int index)
+#include <unistd.h>
+
+void	ft_putchar(char a)
 {
-	if (index < 0)
-		return (-1);
-	else if (index == 0)
-		return (0);
-	else if (index == 1)
-		return (1);
-	else
-		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+	write(1, &a, 1);
+}
+
+void 	ft_putnbr_base(int nbr, char *base)
+{
+	char *result;
+	if (
+}
+
+int		main(int argc, char argv)
+{
+	int *num = argv[1];
+	char *base = argv[2];
+	ft_putnbr_base(num, base); 
 }

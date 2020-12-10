@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/06 12:50:19 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/07 16:47:56 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/02 14:39:07 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/09 20:01:45 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_fibonacci(int index)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	if (index < 0)
-		return (-1);
-	else if (index == 0)
-		return (0);
-	else if (index == 1)
-		return (1);
-	else
-		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+	unsigned int i;
+	unsigned int j;
+
+	i = 0;
+	j = 0;
+	while (dest[j] != '\0')
+		j++;
+	while ((i < nb) && (src[i] != '\0'))
+	{
+		dest[j] = src[i];
+		i++;
+		j++;
+	}
+	dest[j] = '\0';
+	return (dest);
 }

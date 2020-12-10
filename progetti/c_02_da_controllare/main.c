@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/06 12:50:19 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/07 16:47:56 by ametta           ###   ########.fr       */
+/*   Created: 2020/12/07 12:21:40 by ametta            #+#    #+#             */
+/*   Updated: 2020/12/07 15:21:16 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
+#include <string.h>
 
-int	ft_fibonacci(int index)
+int		ft_strcmp(char *s1, char *s2);
+
+int		main(void)
 {
-	if (index < 0)
-		return (-1);
-	else if (index == 0)
-		return (0);
-	else if (index == 1)
-		return (1);
-	else
-		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+	printf("%d\n%d", ft_strcmp("mondo", "ciao"), strcmp("mondo", "ciao"));
 }
