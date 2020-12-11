@@ -6,11 +6,20 @@
 /*   By: ametta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 12:08:28 by ametta            #+#    #+#             */
-/*   Updated: 2020/12/10 12:09:33 by ametta           ###   ########.fr       */
+/*   Updated: 2020/12/11 11:06:41 by ametta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+void	ft_swap(int *a; int *b)
+{
+	int temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
 
 void	ft_putchar(char a)
 {
