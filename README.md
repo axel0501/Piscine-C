@@ -18,7 +18,7 @@ Se vuoi partecipare alla 42 e volessi un consiglio:
   a trovare errori. Quando puoi, dona i tuoi punti valutazione, tranquillo che non vanno nell'etere. 
   Ricorda, quando vuoi prenotare una correzione, sappi che in molti caasi non sei obbligato a consegnare tutti i progetti, ma devi
   sapere bene tutto ciò che il tuo codice fa. Non prenotare a caso!
-- prendi appunti e comprendi perfettamnete ciò che hai fatto in vista degli esami.
+- prendi appunti e comprendi perfettamente ciò che hai fatto in vista degli esami.
 
 Dimostra quanto vali. DAI IL MASSIMO!!!
 
