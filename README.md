@@ -19,6 +19,8 @@ Se vuoi partecipare alla 42 e volessi un consiglio:
   Ricorda, quando vuoi prenotare una correzione, sappi che in molti caasi non sei obbligato a consegnare tutti i progetti, ma devi
   sapere bene tutto ciò che il tuo codice fa. Non prenotare a caso!
 - prendi appunti e comprendi perfettamente ciò che hai fatto in vista degli esami.
+- non sottovalutare l'importanza degli strumenti, specialmente NON salvare a fine giornata e durante le pause tutto sul computer.
+  Impara ad usare GIT e salva online il tuo lavoro.
 
 Dimostra quanto vali. DAI IL MASSIMO!!!
 
