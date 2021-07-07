@@ -29,4 +29,4 @@ Questa repo contiene alcuni progetti che ho svolto durante le piscine di novembr
 
 [ENG] This repo contains my projects that i wrote during the Piscine of november/december 2020 in Rome with some importants notes (in it)
 
-GLHF!
+GLHF!👾
