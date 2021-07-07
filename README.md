@@ -14,13 +14,14 @@ Se vuoi partecipare alla 42 e volessi un consiglio:
 - **LEARN-BY-DOING**: cerca di andare a fondo in quello che stai studiando, sbattici tante volte la testa e non ti preoccupare 
                       di sbagliare, impara scrivendo codice 
 - **la gestione del tempo è fondamentale!**
-- Le valutazioni sono parti fondamentali per l'apprendimento, fanne tante e imparerai più in fretta ad scrivere codice, ma anche
-  a trovare errori. Quando puoi, dona i tuoi punti valutazione, tranquillo che non vanno nell'etere. 
-  Ricorda, quando vuoi prenotare una correzione, sappi che in molti caasi non sei obbligato a consegnare tutti i progetti, ma devi
-  sapere bene tutto ciò che il tuo codice fa. Non prenotare a caso!
-- prendi appunti e comprendi perfettamente ciò che hai fatto in vista degli esami.
-- non sottovalutare l'importanza degli strumenti, specialmente NON salvare a fine giornata e durante le pause tutto sul computer.
-  Impara ad usare GIT e salva online il tuo lavoro.
+- Le valutazioni sono parti fondamentali per l'apprendimento, fanne tante e imparerai a comprendere meglio eventuali errori.
+  Quando puoi, dona i tuoi punti valutazione, tranquillo che non vanno nell'etere. Sappi che in molti caasi non sei obbligato
+  a consegnare tutti i progetti, ma devi essere capace di spiegare cosa fa ogni progetto. Mi raccomando, non prenotare a caso!
+  Consiglio: da nessuna parte c'é scritto che non si possono fare piú correzioni alla volta...
+- prendi appunti e comprendi perfettamente ciò che hai fatto in vista degli esami. Con ció non intendo impara a memoria il codice,
+  ma comprendi bene il ragionamento che sta alla base, 
+- Ricordati di salvare il tuo lavoro, molto spesso (NON SUI TERMINALI DELLA 42). Se sei qui giá lo sai, in caso contrario, questo
+  diventerá presto il tuo piccolo paradiso.
 
 Dimostra quanto vali. DAI IL MASSIMO!!!
 
